@@ -1,6 +1,5 @@
 import {FreshContext, Handlers, RouteConfig, PageProps} from "$fresh/server.ts";
 import {setCookie} from "$std/http/cookie.ts";
-import { resetPropWarnings } from "preact/debug";
 import Login from "../components/Login.tsx";
 import {User} from "../types.ts"
 import jwt from "jsonwebtoken";
@@ -14,9 +13,7 @@ export const handler:Handlers={
         const url= new URL(req.url);
         const form= await req.formData();
         const email= form.get("email")?.toString() || "";
-        const password= form.get("password")?.toString() || "";
-        const name= form.get("name")?.toString()||""
-        
+        const password= form.get("password")?.toString() || "";        
         const JWT_SECRET= Deno.env.get("JWT_SECRET");
         if(!JWT_SECRET){ throw new Error("JWT_SECRET is not set in the environment");}
 

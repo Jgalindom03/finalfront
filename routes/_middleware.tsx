@@ -1,5 +1,5 @@
-import {FreshContext, Handlers, RouteConfig} from "$fresh/server.ts";
-import {getCookies, setCookie} from "$std/http/cookie.ts";
+import {FreshContext } from "$fresh/server.ts";
+import {getCookies, } from "$std/http/cookie.ts";
 import jwt from "jsonwebtoken";
 
 type State={email:string, name:string, id:string}
