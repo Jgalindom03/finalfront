@@ -15,7 +15,6 @@ export const handler: Handlers<Data, State>={
     GET:async(req:Request, ctx:FreshContext<State,Data>)=>{
         const userid= ctx.state.id;
         const API_URL= Deno.env.get("API_URL");
-
         if(!API_URL){
             throw new Error("API_URL is not set in the environment");
         }
