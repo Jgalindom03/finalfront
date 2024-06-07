@@ -4,7 +4,6 @@
 @import url(/videodetail.css);
 @import url(/header.css);
 
-/* Reset de CSS básico para asegurar consistencia entre navegadores */
 * {
   margin: 0;
   padding: 0;
